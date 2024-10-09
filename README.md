@@ -1,4 +1,5 @@
 .env file properties
+
 #MYSQL CONFIG 
 MYSQL_HOST =
 MYSQL_USER =
