@@ -1,6 +1,6 @@
 //* Iniciar las utilidades del sistema.
 var mysql = require("mysql2");
-const controllerGet = require("../Controller/sqlGet")
+const controllerGet = require("../SQL/alumnosQuerys")
 require('dotenv').config()
 
 const credencialesMySql = {
