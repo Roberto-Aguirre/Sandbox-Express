@@ -1,7 +1,8 @@
 //* Iniciar las utilidades del sistema.
-var mysql = require("mysql2");
+var mysql = require("mysql2-promise");
 const controllerGet = require("../SQL/alumnosQuerys")
 require('dotenv').config()
+
 
 const credencialesMySql = {
     host: process.env.MYSQL_HOST,
