@@ -1,5 +1,20 @@
 create database	express;
 USE express;
+DROP TABLE alumnos;
+#No rules
+CREATE TABLE alumnos(
+matricula INTEGER PRIMARY KEY auto_increment,
+nombre VARCHAR(50),
+apellido_paterno VARCHAR(50),
+apellido_materno VARCHAR(50),
+email VARCHAR(50),
+telefono VARCHAR(50),
+genero CHAR(1),
+edad INTEGER,
+fecha_nacimiento date,
+graduado INTEGER
+);
+#Rules
 CREATE TABLE alumnos(
 matricula INTEGER PRIMARY KEY auto_increment,
 nombre VARCHAR(50) NOT NULL,
@@ -18,3 +33,5 @@ SELECT * FROM alumnos;
 ## 0 Estudiante activo
 ## 1 Gradiado
 ## 2 Truncado
+
+DESCRIBE alumnos;

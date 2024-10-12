@@ -1,6 +1,8 @@
-const GetAlumnos = 'SELECT * FROM alumnos';
-const GetAlumno  = 'SELECT * FROM alumnos WHERE id=1';
+const SqlGetAlumnos = 'SELECT * FROM alumnos';
+const SqlGetAlumno  = 'SELECT * FROM alumnos WHERE matricula=?';
+const SqlInsertarAlumno = 'INSERT INTO alumnos (nombre,apellido_paterno,apellido_materno,email,telefono,genero,edad,fecha_nacimiento,graduado) VALUES (?,?,?,?,?,?,?,?,?)'
+
 
 module.exports = {
-    GetAlumnos, GetAlumno
+    SqlGetAlumnos, SqlGetAlumno, SqlInsertarAlumno
 };

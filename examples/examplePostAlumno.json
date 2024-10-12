@@ -1,0 +1,11 @@
+{
+    "nombre": "BlackSpace",
+    "apellido_paterno": "03",
+    "apellido_materno": "Perez",
+    "email": "andres@qa1.com",
+    "telefono": "81112312",
+    "genero": "M",
+    "edad": 24,
+    "fecha_nacimiento": "2003-05-19T00:00:00.000Z",
+    "graduado": 1
+}
