@@ -1,15 +1,18 @@
-const alumnosService = require('../../Services/alumnosService');
+const { getAllAlumnos } = require('../../Services/alumnosService');
 const sqlService = require('../../Services/sqlService')
 
-const GetAlumnos = async (req,res) =>{
-    res.json(await sqlService.GetAll());
+const GetAlumnos = async (req, res) => {
+    res.json({
+        alumnos: await getAllAlumnos(),
+        time: new Date()
+    });
 }
-const GetAlumno = async (req,res) =>{
+const GetAlumno = async (req, res) => {
     let id = req.params
     // console.log(id);
-    res.json(await sqlService.GetAll());
+    res.json(response);
 }
 
 module.exports = {
-    GetAlumnos,GetAlumno
+    GetAlumnos, GetAlumno
 };
