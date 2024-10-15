@@ -1,4 +1,4 @@
-const { getAllAlumnos,getAlumno,insertAlumno } = require('../../Services/alumnosService');
+const { getAllAlumnos,getAlumno,insertAlumno,updatedAlumnos } = require('../../Services/alumnosService');
 const sqlService = require('../../Services/sqlService')
 
 const GetAlumnos = async (req, res) => {
@@ -17,7 +17,7 @@ const GetAlumno = async (req, res) => {
     }
 }
 
-const PostAlumno = async (req, res) => {
+const CreateAlumno = async (req, res) => {
     let response = await insertAlumno(req.body);
     if(response.affectedRows!=0){
         let [newAlumno] = await getAlumno(response.insertId)
@@ -26,9 +26,13 @@ const PostAlumno = async (req, res) => {
     else{
         res.status(400).json({message:'Bad Request'})
     }
+}
 
-
+const UpdateAlumno = async (req,res) =>{
+    let updatedAlumno = await updatedAlumnos(req.body,req.params);
+    // res.json(updatedAlumno)
+    res.json({})
 }
 module.exports = {
-    GetAlumnos, GetAlumno, PostAlumno
+    GetAlumnos, GetAlumno, CreateAlumno, UpdateAlumno
 };

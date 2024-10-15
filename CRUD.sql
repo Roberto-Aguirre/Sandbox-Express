@@ -15,6 +15,7 @@ fecha_nacimiento date,
 graduado INTEGER
 );
 #Rules
+
 CREATE TABLE alumnos(
 matricula INTEGER PRIMARY KEY auto_increment,
 nombre VARCHAR(50) NOT NULL,
@@ -29,6 +30,7 @@ graduado INTEGER NOT NULL
 );
 
 INSERT INTO alumnos (nombre,apellido_paterno,apellido_materno,email,telefono,genero,edad,fecha_nacimiento,graduado) VALUES ('Andres','Chavez','Valquez','andres@qa.com','8110630544','M',21,'2003-12-20',0);
+UPDATE alumnos SET ;
 SELECT * FROM alumnos;
 ## 0 Estudiante activo
 ## 1 Gradiado
